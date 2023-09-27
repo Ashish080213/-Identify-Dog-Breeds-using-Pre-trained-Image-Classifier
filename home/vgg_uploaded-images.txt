@@ -1,0 +1,88 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Prints 10 filenames from folder pet_images/
+ 1 file:                Dog_02.jpg
+ 2 file:                Dog_01.jpg
+ 3 file:             Bucket_01.jpg
+ 4 file:              Eagle_01.jpg
+
+Filename= Dog_02.jpg    Label= dog
+
+Filename= Dog_01.jpg    Label= dog
+
+Filename= Bucket_01.jpg    Label= bucket
+
+Filename= Eagle_01.jpg    Label= eagle
+{'Dog_02.jpg': ['dog'], 'Dog_01.jpg': ['dog'], 'Bucket_01.jpg': ['bucket'], 'Eagle_01.jpg': ['eagle']}
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     Dog_02.jpg  label:                        dog
+ 2 key:                     Dog_01.jpg  label:                        dog
+ 3 key:                  Bucket_01.jpg  label:                     bucket
+ 4 key:                   Eagle_01.jpg  label:                      eagle
+{'Dog_02.jpg': ['dog', 'german shepherd, german shepherd dog, german police dog, alsatian', 1], 'Dog_01.jpg': ['dog', 'german shepherd, german shepherd dog, german police dog, alsatian', 1], 'Bucket_01.jpg': ['bucket', 'bucket, pail', 1], 'Eagle_01.jpg': ['eagle', 'bald eagle, american eagle, haliaeetus leucocephalus', 1]}
+
+     MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+                 Bucket_01.jpg: 
+Real:                     bucket   Classifier:                   bucket, pail
+
+                  Eagle_01.jpg: 
+Real:                      eagle   Classifier: bald eagle, american eagle, haliaeetus leucocephalus
+
+ NOT A MATCH:
+
+# Total Images 4 # Matches: 4 # NOT Matches: 0
+
+     MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                 Bucket_01.jpg: 
+Real:                     bucket   Classifier:                   bucket, pail  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                  Eagle_01.jpg: 
+Real:                      eagle   Classifier: bald eagle, american eagle, haliaeetus leucocephalus  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+# Total Images 4 # Matches: 4 # NOT Matches: 0
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+N Images            :   4
+N Dog Images        :   2
+N NOT-Dog Images    :   2
+
+pct_match: 100.0
+pct_correct_dogs: 100.0
+pct_correct_breed: 100.0
+pct_correct_notdogs: 100.0
+
+** Total Elapsed Runtime: 0:0:9
